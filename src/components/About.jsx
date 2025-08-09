@@ -9,23 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function About() {
     const pointRef = useRef()
 
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(pointRef,
-            {
-                x: -1000,
-            }, {
-            y: 0,
-            scrollTrigger: {
-                trigger: textRef,
-                markers: true,
-                start: "top 0",
-                end: "bottom 0",
-                scrub: true
-            }
-
-        })
-    })
 
     return (
         <section className="w-full mx-auto p-8 h-screen">
@@ -41,7 +24,7 @@ export function About() {
                         Cada uma atua de forma separada, com operações próprias e especializadas, mas compartilhando a mesma essência: excelência, inovação e compromisso com resultados.
                     </p>
                 </div>
-                <div ref="pointRef" className=" w-full">
+                <div  className=" w-full">
                     <div className="flex flex-row  items-center gap-6">
                         <div className="w-full">
                             <p className="text-xl">
