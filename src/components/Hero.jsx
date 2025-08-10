@@ -1,3 +1,5 @@
+import LogoFortSat from "../assets/logo-fortsat.svg"
+
 export function Hero() {
     return (
         <section className="w-full h-screen mx-auto p-0 sm:p-6 ">
@@ -5,10 +7,8 @@ export function Hero() {
                 <p className="">
                     Menu
                 </p>
-                <div className="text-center flex flex-col max-w-4xl">
-                    <p className="text-sm uppercase text-[#FFF]">
-                        FortSat
-                    </p>
+                <div className="text-center flex flex-col max-w-4xl items-center gap-6">
+                    <img src={LogoFortSat} alt="" className="w-fit"/>
                     <h1 className="text-3xl sm:text-6xl font-lexend font-bold text-[#FFF]">
                         Conectando negócios, Movendo Resultados, Transformando Histórias
                     </h1>
@@ -16,7 +16,7 @@ export function Hero() {
                         Somos um grupo formado por três forças — FORTSAT, FORTLOG e FORTSUN — que unem pessoas, processos e soluções para gerar resultados e transformar vidas. Nosso propósito é construir, junto com você, o futuro que merece.
                     </p>
                 </div>
-                <p className="">
+                <p className="font-lexend text-[#FFF]">
                     Conheça Mais
                 </p>
             </div>
