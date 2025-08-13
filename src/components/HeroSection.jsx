@@ -10,28 +10,28 @@ export function HeroSection() {
     const bgRef = useRef(null);
 
     useEffect(() => {
-        if (bgRef.current) {
-            gsap.to(bgRef.current, {
-                y: 100, // movimento do parallax
-                ease: "none",
-                scrollTrigger: {
-                    trigger: bgRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: true,
-                },
-            });
-        }
+        gsap.to(".bgRef", {
+            y: 500, // movimento do parallax
+            
+            ease: "power3",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+            },
+        });
+
     }, []);
 
     return (
-        <section className="w-full p-6 h-screen">
+        <section className="w-full p-6 h-screen hero">
             <div className="relative h-full overflow-hidden p-6 rounded-xl flex flex-col items-center justify-around">
                 <img
-                    ref={bgRef}
                     src={Bg}
                     alt="Background"
-                    className="absolute top-0 z-[-10] left-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
                 />
                 <ul className="w-fit flex flex-row gap-6 items-center">
                     <li className="">
@@ -52,7 +52,7 @@ export function HeroSection() {
                         Somos um grupo formado por três forças — FORTSAT, FORTLOG e FORTSUN — que unem pessoas, processos e soluções para gerar resultados e transformar vidas. Nosso propósito é construir, junto com você, o futuro que merece.
                     </p>
                 </div>
-                <div className="">
+                <div className="hero">
                     Saiba Maiks
                 </div>
             </div>

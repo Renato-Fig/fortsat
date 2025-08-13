@@ -9,12 +9,9 @@ export function EcosystemSection() {
                     <img src={Image} alt="" />
                 </div>
                 <div className="w-full flex flex-col gap-6 text-[#FFF]">
-                    <h2 className="text-4xl sm:text-6xl font-lexend font-bold">
-                        Mais do que um grupo de empresas
+                    <h2 className="text-4xl sm:text-6xl font-lexend font-bold uppercase">
+                        Mais do que um grupo de empresas. Somos um ecossistema
                     </h2>
-                    <p className="text-base sm:text-xl">
-                        Somos um ecossistema de soluções capazes de transformar negócios e impactar positivamente pessoas e mercados.
-                    </p>
                 </div>
             </div>
         </section>
