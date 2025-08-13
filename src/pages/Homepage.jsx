@@ -1,18 +1,24 @@
-import { Hero } from "../components/Hero"
-import { Partners } from "../components/Partners"
-import { About } from "../components/About"
-import { Footer } from "../components/Footer"
-import { CTA } from "../components/CTA"
+import { HeroSection } from "../components/HeroSection"
+import { BlogSection } from "../components/BlogSection"
+import { AboutSection } from "../components/AboutSection"
+import { CompaniesSection } from "../components/CompaniesSection"
+import { PartnersSection } from "../components/PartnersSection"
+import { EcosystemSection } from "../components/EcosystemSection"
+import { MetricsSection } from "../components/MetricsSection"
+import { FooterSection } from "../components/FooterSection"
 
 export function Homepage() {
 
     return (
         <>
-            <Hero />
-            <Partners />
-            <About />
-            <CTA />
-            <Footer />
+            <HeroSection />
+            <MetricsSection />
+            <AboutSection />
+            <CompaniesSection />
+            <EcosystemSection />
+            <PartnersSection />
+            <BlogSection />
+            <FooterSection />
         </>
     )
 }
