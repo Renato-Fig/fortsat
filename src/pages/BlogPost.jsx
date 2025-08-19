@@ -9,7 +9,7 @@ import 'moment/dist/locale/pt-br';
 
 moment.locale('pt-br');
 
-import { FooterSection } from "../components/FooterSection"
+import { Footer } from "../components/Footer"
 
 export function BlogPost() {
     const { id } = useParams(); // Aqui, `id` será o `documentId`
