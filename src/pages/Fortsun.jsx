@@ -1,6 +1,10 @@
 import { Footer } from "../components/Footer"
 import { NavigationBar } from "../components/NavigationBar"
 import Placeholder from "../assets/card-3.png"
+import Photo1 from "../assets/fortsun-photo-1.png"
+import Photo2 from "../assets/fortsun-photo-2.png"
+import Photo3 from "../assets/fortsun-photo-3.png"
+import Photo4 from "../assets/fortsun-photo-4.png"
 
 export function Fortsun() {
     const headline = "font-lexend font-medium text-2xl sm:text-3xl max-w-2xl"
@@ -27,9 +31,9 @@ export function Fortsun() {
             <section className="p-6 flex flex-col items-center">
                 <div className="flex flex-col gap-6 max-w-3xl items-center">
                     <div className="w-full aspect-3/1 rounded-3xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo4} alt="" className="w-full" />
                     </div>
-                    <div className={`${textContainer} text-center`}>
+                    <div className={`${textContainer} text-center items-center`}>
                         <h3 className={headline}>
                             A FORTSUN Brasil nasceu com um propósito claro: tornar a tecnologia e as soluções financeiras mais simples, acessíveis e transformadoras.
                         </h3>
@@ -47,11 +51,11 @@ export function Fortsun() {
                             Em pouco tempo, conquistamos o posto de número 1 no Brasil, resultado da nossa dedicação, excelência e compromisso com quem confia na nossa marca.
                         </h3>
                         <p className={paragraph}>
-                            Em parceria estratégica com o Mercado Pago, conectamos milhares de empreendedores e empresas ao maior ecossistema de pagamentos da América Latina, levando inovação de forma descomplicada e dinâmica aos estados do Ceará, Piauí e Maranhão.
+                            Nosso crescimento acelerado e nossas conquistas, como a expansão para novos estados e o lançamento do Sun Academy, refletem nossa essência: unir tecnologia, talento e propósito para gerar impacto real.
                         </p>
                     </div>
                     <div className="w-full rounded-2xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo2} alt="" className="w-full" />
                     </div>
                 </div>
             </section>
@@ -59,14 +63,14 @@ export function Fortsun() {
             <section className="p-6">
                 <div className="flex flex-col sm:flex-row gap-6 items-center">
                     <div className="w-full rounded-3xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo3} alt="" className="w-full" />
                     </div>
                     <div className={textContainer}>
                         <h3 className={headline}>
-                            Em pouco tempo, conquistamos o posto de número 1 no Brasil, resultado da nossa dedicação, excelência e compromisso com quem confia na nossa marca.
+                            O que nos move é o EMPOWER, a cultura que sustenta e inspira cada passo da FORTSUN Brasil
                         </h3>
-                        <p className={paragraph}>
-                            Em parceria estratégica com o Mercado Pago, conectamos milhares de empreendedores e empresas ao maior ecossistema de pagamentos da América Latina, levando inovação de forma descomplicada e dinâmica aos estados do Ceará, Piauí e Maranhão.
+                        <p className="text-xl max-w-2xl">
+                            EMPOWER é superação, inovação, compromisso com a excelência, cultura de confiança e lealdade. Mas, acima de tudo, é cuidar das pessoas, colocando-as no centro de tudo.
                         </p>
                     </div>
                 </div>
@@ -76,17 +80,11 @@ export function Fortsun() {
                 <div className="bg-[#001B3A] rounded-3xl flex flex-col sm:flex-row gap-6 p-6 items-center">
                     <div className={`${textContainer} text-[#FFF]`}>
                         <h3 className={headline}>
-                            O que nos move é o EMPOWER, a cultura que sustenta e inspira cada passo da FORTSUN Brasil
-                        </h3>
-                        <p className="text-xl max-w-2xl">
-                            EMPOWER é superação, inovação, compromisso com a excelência, cultura de confiança e lealdade. Mas, acima de tudo, é cuidar das pessoas, colocando-as no centro de tudo.
-                        </p>
-                        <p className={paragraph}>
                             Acreditamos que o verdadeiro impacto acontece quando empoderamos uns aos outros, criando um ambiente onde todos crescem juntos e multiplicam resultados.
-                        </p>
+                        </h3>
                     </div>
                     <div className="w-full rounded-2xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo1} alt="" className="w-full" />
                     </div>
                 </div>
             </section>

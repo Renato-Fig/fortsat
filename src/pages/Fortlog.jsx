@@ -2,6 +2,10 @@ import { Footer } from "../components/Footer"
 import { NavigationBar } from "../components/NavigationBar"
 import Placeholder from "../assets/card-3.png"
 
+import Photo1 from "../assets/fortlog-photo-1.png"
+import Photo2 from "../assets/fortlog-photo-2.png"
+import Photo3 from "../assets/fortlog-photo-3.png"
+
 export function Fortlog() {
     const headline = "font-lexend font-medium text-2xl sm:text-3xl max-w-2xl"
     const paragraph = "text-base max-w-2xl"
@@ -27,9 +31,9 @@ export function Fortlog() {
             <section className="p-6 flex flex-col items-center">
                 <div className="flex flex-col gap-6 max-w-3xl items-center">
                     <div className="w-full aspect-3/1 rounded-3xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo1} alt="" className="w-full" />
                     </div>
-                    <div className="text-center">
+                    <div className={`${textContainer} text-center items-center`}>
                         <h3 className={headline}>
                             Na FORTLOG Brasil, acreditamos que logística não é apenas transporte é o motor silencioso que mantém negócios vivos, conectados e crescendo.
                         </h3>
@@ -52,14 +56,14 @@ export function Fortlog() {
                         </p>
                     </div>
                     <div className="w-full rounded-2xl overflow-hidden">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo2} alt="" className="w-full" />
                     </div>
                 </div>
             </section>
             <section className="p-6">
                 <div className="flex flex-col sm:flex-row gap-6 items-center">
                     <div className="w-full rounded-3xl overflow-hidden bg-[#CCC]">
-                        <img src={Placeholder} alt="" className="w-full" />
+                        <img src={Photo3} alt="" className="w-full" />
                     </div>
                     <div className={textContainer}>
                         <h3 className={headline}>
