@@ -6,7 +6,7 @@ export function NavigationBar() {
                 <img src={LogoNavBar} alt="" />
                 <ul className="sm:flex flex-row hidden text-[#FFF] h-fit gap-6">
                     <li className="uppercase font-medium">
-                        <a href="" className="">
+                        <a href="/" className="">
                             O grupo
                         </a>
                     </li>

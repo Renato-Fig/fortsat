@@ -8,6 +8,7 @@ import LogoFortsatSymbol from "../assets/logo-fortsat-symbol.svg"
 import LogoFortsunSymbol from "../assets/logo-fortsun-symbol.svg"
 import LogoFortlogSymbol from "../assets/logo-fortlog-symbol.svg"
 import CardPlaceholder from "../assets/card-2.png"
+import ArrowDown from "../assets/icons/arrow-down.svg"
 
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -26,7 +27,7 @@ export function Homepage() {
         <>
             <NavigationBar />
 
-            <section className="sm:p-6 h-screen">
+            <section id="hero" className="sm:p-6 h-screen">
                 <div className="bg-[url('/images/bg.jpg')] bg-cover p-6 sm:rounded-3xl h-full flex flex-col items-center justify-between">
                     <div></div>
                     <div className={`${textContainer} items-center`}>
@@ -40,18 +41,19 @@ export function Homepage() {
                             Somos um grupo formado por três forças — FORTSAT, FORTLOG e FORTSUN — que unem pessoas, processos e soluções para gerar resultados e transformar vidas.
                         </p>
                     </div>
-                    <a href="" className="">
+                    <a href="#intro" className="text-[#FFF] flex flex-row gap-3 items-center uppercase font-lexend font-medium">
                         Saiba Mais
+                        <img src={ArrowDown} alt="" />
                     </a>
                 </div>
             </section>
 
-            <section className="p-6 flex flex-col items-center w-full mx-auto">
+            <section id="intro" className="p-6 flex flex-col items-center w-full mx-auto">
                 <div className={textContainer}>
                     <h2 className={headline}>
-                        Somos o <br />grupo fortsat
+                        Somos o <br /><span className="text-[#0598D8] font-lexend font-bold"> grupo fortsat</span>
                     </h2>
-                    <p className={subheadline}>
+                    <p className={`${subheadline} text-[#606062]`}>
                         Cada uma das nossos segmentos atuam de forma especializada, mas compartilham a mesma essência: excelência, inovação e resultados.
                     </p>
                 </div>
@@ -59,43 +61,37 @@ export function Homepage() {
 
             <section className="p-6 flex flex-col items-center">
                 <div className="flex flex-col sm:flex-row gap-6 max-w-7xl items-center w-full">
-                    <div className={`${card} bg-gradient-to-r from-[#047EB3] to-[#0598D8]/25`}>
-                        <img src={CardPlaceholder} alt="" className="absolute top-0 left-0 h-full z-[-1]" />
-                        <div className="flex flex-col justify-between h-full">
-                            <img src={LogoFortsatSymbol} alt="" className="w-fit" />
-                            <div className="flex flex-col gap-3">
-                                <h3 className="text-2xl uppercase font-lexend font-bold">
-                                    Fortsat
-                                </h3>
-                                <p className="">
-                                    Laore et, et porttitor odio tincidunt
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
                     <FlipCard
-      frontBg="bg-gradient-to-r from-[#047EB3] to-[#0598D8]/25"
-      backBg="bg-[#0598D8]"
-      logo={LogoFortsatSymbol}
-      title="Fortsat"
-      description="Laore et, et porttitor odio tincidunt"
-      backContent={<p>Mais informações sobre a Fortsat...</p>}
-    />
-                    <div className={`${card} bg-gradient-to-r from-[#C79D00] to-[#F4C100]/25`}>
-                        <img src={CardPlaceholder} alt="" className="absolute top-0 left-0 h-full z-[-1]" />
-                        <div className="flex flex-col justify-between h-full">
-                            <img src={LogoFortlogSymbol} alt="" className="w-fit" />
-                            <div className="flex flex-col gap-3">
-                                <h3 className="text-2xl uppercase font-lexend font-bold">
-                                    Fortlog
-                                </h3>
-                                <p className="">
-                                    Laore et, et porttitor odio tincidunt
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        frontBg="bg-gradient-to-r from-[#047EB3] to-[#0598D8]/25"
+                        backBg="bg-[#0598D8]"
+                        logo={LogoFortsatSymbol}
+                        title="Fortsat"
+                        description="Laore et, et porttitor odio tincidunt"
+                        backContent={<p>Responsável pelo comércio e distribuição, conectamos produtos ao mercado certo com agilidade, eficiência e qualidade, transformando oportunidades em negócios sólidos.</p>}
+                        href="/"
+                    />
+
+                    <FlipCard
+                        frontBg="bg-gradient-to-r from-[#001B3A] to-[#001B3A]/25"
+                        backBg="bg-[#001B3A]"
+                        logo={LogoFortsunSymbol}
+                        title="Fortsun"
+                        description="Laore et, et porttitor odio tincidunt"
+                        backContent={<p>Prestadora de serviços com uma parceria sólida e reconhecida nacionalmente com o Mercado Pago. Atuamos de forma simples e descomplicada em meios de pagamento, oferecendo soluções que impulsionam vendas e fortalecem empreendedores.</p>}
+                        href="/fortsun"
+                    />
+
+                    <FlipCard
+                        frontBg="bg-gradient-to-r from-[#C79D00] to-[#F4C100]/25"
+                        backBg="bg-[#C79D00]"
+                        logo={LogoFortlogSymbol}
+                        title="Fortlog"
+                        description="Laore et, et porttitor odio tincidunt"
+                        backContent={"Especialista em logística, armazenagem, logística reversa, cross docking e cargas aéreas, garantimos que cada operação seja ágil, segura e totalmente rastreável."}
+                        href="/fortlog"
+                    />
+                    
                 </div>
             </section>
 
@@ -103,31 +99,31 @@ export function Homepage() {
 
                 <div className="flex border flex-col sm:text-left text-center sm:flex-row gap-6 items-center p-6 max-w-7xl bg-[#FFF] rounded-3xl w-full sm:h-[300px]">
                     <div className="w-full">
-                        <h3 className="font-lexend font-bold uppercase text-2xl">
+                        <h3 className="font-lexend font-bold uppercase text-2xl text-[#0598D8]">
                             Confira alguns de nossos números
                         </h3>
                     </div>
                     <div className="w-full flex flex-col gap-3 items-center text-center">
-                        <h3 className="font-lexend font-bold text-6xl">
+                        <h3 className="font-lexend font-bold text-6xl text-[#0598D8]">
                             +50
                         </h3>
-                        <p className="">
+                        <p className="text-[#606062]">
                             Lorem ipsum dolor
                         </p>
                     </div>
                     <div className="w-full flex flex-col gap-3 items-center text-center">
-                        <h3 className="font-lexend font-bold text-6xl">
+                        <h3 className="font-lexend font-bold text-6xl text-[#0598D8]">
                             +10mi
                         </h3>
-                        <p className="">
+                        <p className="text-[#606062]">
                             Lorem ipsum dolor
                         </p>
                     </div>
                     <div className="w-full flex flex-col gap-3 items-center text-center">
-                        <h3 className="font-lexend font-bold text-6xl">
+                        <h3 className="font-lexend font-bold text-6xl text-[#0598D8]">
                             8.5
                         </h3>
-                        <p className="">
+                        <p className="text-[#606062]">
                             Lorem ipsum dolor
                         </p>
                     </div>
@@ -200,7 +196,7 @@ export function Homepage() {
                 <div className="w-full max-w-7xl flex flex-col gap-6 items-center ">
                     <div className={textContainer}>
                         <h2 className={headline}>
-                            Notícias da FortSat
+                            <span className="text-[#0598D8] font-lexend font-bold"> Notícias</span> da FortSat
                         </h2>
                     </div>
                     <div className="w-full">
