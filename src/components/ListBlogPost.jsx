@@ -77,18 +77,18 @@ export function ListBlogPost() {
                     </Link>
                 ))}
             </div>
-            <div className="w-fit">
+            <div className="w-fit flex flex-row gap-3">
                 <button
                     onClick={prev}
                     disabled={startIndex === 0}
-                    className="disabled:opacity-50"
+                    className="disabled:opacity-50 cursor-pointer"
                 >
                     <img src={ChevronLeft} alt="" />
                 </button>
                 <button
                     onClick={next}
                     disabled={startIndex >= articles.length - visibleCount}
-                    className=" disabled:opacity-50"
+                    className=" disabled:opacity-50  cursor-pointer"
                 >
                     <img src={ChevronRight} alt="" />
                 </button>

@@ -15,6 +15,10 @@ import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
+
 gsap.registerPlugin(SplitText);
 
 export function Homepage() {
@@ -22,6 +26,8 @@ export function Homepage() {
     const headline = "font-lexend font-bold text-4xl sm:text-6xl uppercase "
     const subheadline = "text-xl"
     const textContainer = "flex flex-col gap-6 max-w-4xl w-full text-center"
+
+
 
     return (
         <>
@@ -31,7 +37,7 @@ export function Homepage() {
                 <div className="bg-[url('/images/bg.jpg')] bg-cover p-6 sm:rounded-3xl h-full flex flex-col items-center justify-between">
                     <div></div>
                     <div className={`${textContainer} items-center`}>
-                        <h2 className="px-6 py-2 rounded-full uppercase text-[#FFF] font-medium bg-[#000]/50 backdrop-blur-md w-fit">
+                        <h2 className="px-6 py-2 rounded-full font-bold font-lexend uppercase text-[#099BD9] font-medium bg-[#FFF]/25 border border-[#FFF]/50 backdrop-blur-md w-fit">
                             Grupo Fortsat
                         </h2>
                         <h1 className="font-lexend font-bold text-4xl sm:text-7xl text-[#FFF]">
@@ -48,9 +54,11 @@ export function Homepage() {
                 </div>
             </section>
 
-            <section id="intro" className="p-6 flex flex-col items-center w-full mx-auto">
+            <section id="intro" className="p-6 pt-[144px] flex flex-col items-center w-full mx-auto">
                 <div className={textContainer}>
-                    <h2 className={headline}>
+                    <h2 className={headline}
+                        data-scroll data-scroll-speed="0.5"
+                    >
                         Somos o <br /><span className="text-[#0598D8] font-lexend font-bold"> grupo fortsat</span>
                     </h2>
                     <p className={`${subheadline} text-[#606062]`}>
@@ -91,7 +99,7 @@ export function Homepage() {
                         backContent={"Especialista em logística, armazenagem, logística reversa, cross docking e cargas aéreas, garantimos que cada operação seja ágil, segura e totalmente rastreável."}
                         href="/fortlog"
                     />
-                    
+
                 </div>
             </section>
 

@@ -9,6 +9,7 @@ import 'moment/dist/locale/pt-br';
 
 moment.locale('pt-br');
 
+import { NavigationBar } from "../components/NavigationBar"
 import { Footer } from "../components/Footer"
 
 export function BlogPost() {
@@ -35,8 +36,9 @@ export function BlogPost() {
 
     return (
         <>
-            <section className="max-w-7xl p-6 flex flex-col gap-6 mx-auto">
-                <div className="flex flex-col text-center items-center gap-6">
+            <NavigationBar />
+            <section className="max-w-7xl p-6 flex flex-col gap-6 mx-auto pt-[200px] items-center">
+                <div className="flex flex-col text-center items-center gap-6 max-w-3xl">
                     <h2 className="text-3xl font-medium">
                         {article.title}
                     </h2>
@@ -44,15 +46,15 @@ export function BlogPost() {
                         {moment(article.date).format('D [de] MMMM [de] YYYY')}
                     </p>
                 </div>
-                <div className="rounded-xl overflow-hidden aspect-2/1">
+                <div className="rounded-xl overflow-hidden aspect-2/1 w-full">
                     <img src={`http://localhost:1337${article.cover?.url}`} alt="" className="w-full" />
                 </div>
             </section>
-            <div className="max-w-2xl mx-auto p-6">
+            <div className="max-w-3xl mx-auto p-6">
                 <BlocksRenderer
                     content={article.content}
                     blocks={{
-                        paragraph: ({ children }) => <p className="text-md">{children}</p>,
+                        paragraph: ({ children }) => <p className="text-md mb-4">{children}</p>,
                         heading: ({ children, level }) => {
                             switch (level) {
                                 case 1:
@@ -74,7 +76,7 @@ export function BlogPost() {
                     }}
                 />
             </div>
-            <FooterSection />
+            <Footer />
         </>
     )
 }
